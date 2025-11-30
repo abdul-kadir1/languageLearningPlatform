@@ -106,7 +106,7 @@ app.get("/*splat", (req, res) => {
   res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"));
 });
 
-//Bind to Render port + all interfaces
+//Bind to Render port + all Interfaces
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server running on port ${PORT}`);
 });
