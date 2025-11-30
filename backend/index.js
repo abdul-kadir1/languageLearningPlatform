@@ -20,10 +20,17 @@ const __dirname = path.resolve();
 
 app.use(
   cors({
-     origin:"https://languagelearningplatform.onrender.com",
+    origin:"https://languagelearningplatform.onrender.com",
     credentials: true,
   })
 );
+
+res.cookie("token", token, {
+  httpOnly: true,
+  secure: true,        // important for HTTPS (Render)
+  sameSite: "none",    // required when frontend & backend share domain
+});
+
 
 app.use(express.json());
 app.use(cookieParser());
