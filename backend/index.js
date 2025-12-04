@@ -91,7 +91,7 @@ app.use(session({
   }
 }));
 
-app.use(cors({ origin: true, credentials: true }));
+app.use(cors({ origin: "https://languagelearningplatform.onrender.com", credentials: true }));
 app.use(express.json());
 app.use(cookieParser());
 

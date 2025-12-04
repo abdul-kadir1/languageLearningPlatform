@@ -39,7 +39,7 @@ export async function signup(req, res) {
       password,
       profilePic: randomAvatar,
     });
-
+await newUser.save();  // save new user 
     try {
       await upsertStreamUser({
         id: newUser._id.toString(),
